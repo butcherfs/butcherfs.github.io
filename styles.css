@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); /* Importing a cute and beautiful font */
+
+body {
+    font-family: 'Pacifico', cursive; /* Changed font to Pacifico */
+    background-color: #ecad83; /* Changed background to a nice warm yellow */
+    color: #ff3366;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent both horizontal and vertical scrollbars */
+    width: 100vw; /* Set width to 100% of the viewport width */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewport {
+    width: 390px; /* Set width to 390px */
+    height: 844px; /* Set height to 844px */
+    overflow: hidden; /* Prevent scrolling within the viewport */
+    position: relative;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Ensure main content takes full width */
+    height: 100%; /* Ensure main content takes full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+}
+
+.center {
+    width: 182px; /* Set width to 182px */
+    height: 312px; /* Set height to 312px */
+    margin-top: 20px; /* Adjust margin to move the GIF higher */
+}
+
+#prompt {
+    font-size: 1.5em; /* Adjusted font size for better mobile view */
+    margin-top: 20px; /* Adjust margin to move the prompt higher */
+}
+
+button {
+    background-color: #ff3366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em; /* Adjusted font size for better mobile view */
+    margin-top: 20px;
+    -webkit-tap-highlight-color: transparent; /* Prevent color change on mobile tap */
+}
+
+button:hover {
+    background-color: #ff6699;
+}
+
+#no-button {
+    position: relative;
+}
+
+.heart {
+    position: absolute;
+    width: 40px; /* Increased size of hearts */
+    height: 40px; /* Increased size of hearts */
+    background: url('heart.png') no-repeat center center;
+    background-size: contain;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+footer {
+    font-family: 'Pacifico', cursive; /* Same font as the prompt */
+    color: #ff3366;
+    margin-top: 20px;
+}
